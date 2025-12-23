@@ -1,0 +1,242 @@
+/**
+ * Turnerworks Official Stylesheet
+ * 
+ * Canonical styling for all Turnerworks projects
+ * Last updated: December 2025
+ * 
+ * Usage:
+ * <link rel="stylesheet" href="https://raw.githubusercontent.com/turnerworks/coming-out-swinging/main/turnerworks-style.css">
+ *
+ * Or use via jsDelivr CDN:
+ * <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/turnerworks/coming-out-swinging@main/turnerworks-style.css">
+ */
+
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === CORE STYLING === */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* === CONTAINER === */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+/* === TYPOGRAPHY === */
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+h2 {
+  font-size: 2em;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #ffd700;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+/* === CONTENT BOXES === */
+.manifesto {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-left: 5px solid #ffd700;
+  margin: 30px 0;
+  border-radius: 10px;
+}
+
+.loop {
+  background: rgba(255, 215, 0, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.info-box {
+  background: rgba(255, 215, 0, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  font-size: 0.95em;
+}
+
+/* === FORMS === */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid rgba(255, 215, 0, 0.3);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1em;
+  transition: all 0.3s;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #ffd700;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+select {
+  cursor: pointer;
+}
+
+select option {
+  background: #333;
+  color: #fff;
+}
+
+/* === BUTTONS === */
+button,
+.cta button {
+  background: #ffd700;
+  color: #333;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.2em;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-weight: bold;
+}
+
+button:hover,
+.cta button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+button:active,
+.cta button:active {
+  transform: scale(0.98);
+}
+
+/* === CALL TO ACTION === */
+.cta {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* === RESPONSE BOXES === */
+.response-box {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 5px solid #ffd700;
+  border-radius: 10px;
+  display: none;
+}
+
+.response-box.show {
+  display: block;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.response-header {
+  font-size: 1.3em;
+  color: #ffd700;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.response-content {
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+/* === CODE/MONOSPACE === */
+.endpoint-display,
+code,
+pre {
+  font-family: 'Courier New', monospace;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  word-break: break-all;
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  button,
+  .cta button {
+    padding: 12px 30px;
+    font-size: 1em;
+  }
+}
